@@ -1,0 +1,68 @@
+# API de Alertas – Node.js + Express
+
+Este proyecto implementa una API REST en Node.js con Express que permite enviar alertas a usuarios.
+
+
+## Instalación y Ejecución del Proyecto
+
+1. Clonar el repositorio:
+
+## Clonar repo 
+
+git clone <url-del-repositorio>
+
+## Posicionarse en la raiz del proyecto
+
+Instalar dependencias:
+npm install
+
+
+Configurar el archivo .env (ver ejemplo más abajo).
+
+- Compilar aplicación
+
+npm run build
+
+- Ejecutar la aplicación:
+
+npm start
+
+La API quedará disponible en:
+
+http://localhost:3000
+
+
+##  Endpoint Disponible
+Enviar una alerta
+POST /api/alerta
+
+Body (JSON):
+
+
+{
+  "destinatario": "falbarracin@gmail.com",
+  "mensaje": "Mje alerta"
+}
+
+Respuesta exitosa:
+
+
+{
+  "message": "Alerta enviada correctamente"
+}
+
+
+## Configuración Dinámica
+El canal de notificación se configura mediante variables de entorno.
+
+Archivo .env (en la raiz del proyecto)
+
+PORT=3000
+NOTIFICATION_CHANNEL=email
+
+- Valores posibles para NOTIFICATION_CHANNEL:
+
+email → Usa EmailNotificador (valor por defecto)
+
+sms → Usa SmsNotificador
+
