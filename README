@@ -9,7 +9,7 @@ Este proyecto implementa una API REST en Node.js con Express que permite enviar 
 
 ## Clonar repo 
 
-git clone <url-del-repositorio>
+git clone https://github.com/falbarracin/notification-api.git
 
 ## Posicionarse en la raiz del proyecto
 
